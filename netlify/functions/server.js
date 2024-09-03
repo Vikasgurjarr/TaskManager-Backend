@@ -35,10 +35,7 @@ app.get('/api/hello', (req, res) => {
     res.json({ message: 'Hello from Netlify!' });
   });
 
-  app.listen(3000, () => {
-    console.log('Server is running on port 3000'); // Add this log statement
-  });
-  
+
 
 // Error handling middleware
 app.use(errorMiddleware);

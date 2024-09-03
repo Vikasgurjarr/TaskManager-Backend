@@ -3,6 +3,7 @@ const PhoneNumber = require('libphonenumber-js');
 
 const accountSid = process.env.ACCOUNT_SID;
 const authToken = process.env.SMS_AUTH_TOKEN;
+
 const client = new twilio(accountSid, authToken);
 
 const sendSMS = async (phoneNumber, body) => {
