@@ -1,3 +1,4 @@
+// netlify/functions/server.js
 
 require("dotenv").config();
 const express = require("express");
@@ -26,32 +27,15 @@ app.use(express.json());
 app.use("/api/auth", router);
 
 // admin route
-app.use("/api/admin",adminRoute);
+app.use("/api/admin", adminRoute);
 
-//project route
- app.use("/api", projectRoutes);
+// project route
+app.use("/api", projectRoutes);
 
- //task route
- app.use('/api', taskRoutes);
+// task route
+app.use('/api', taskRoutes);
 
- 
 app.use(errorMiddleware);
 
-const PORT = 5000;
-
-// connectdb()
-//     .then(() => {
-//         app.listen(PORT, () => {
-//             console.log(`Server is running at port : ${PORT}`);
-//         });
-//     })
-//     .catch((error) => {
-//         console.error("Failed to connect to the database:", error);
-//     });
-
-
-const handler = serverless(app);
-
-module.exports.handler = async (event, context) => {
-    return handler(event, context);
-};
+// Export the app as a serverless function
+module.exports.handler = serverless(app);
