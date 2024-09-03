@@ -23,11 +23,11 @@ const projectValidators = [
 ];
 
 // Routes
-router.get('/projects', projectController.getProjects);
-router.post('/projects', projectValidators, projectController.addProject);
-router.get('/projects/:id', authMiddleware, projectController.getProjectById);
-router.put('/projects/:id', authMiddleware, projectValidators, projectController.updateProjectById);
-router.delete('/projects/:id', authMiddleware, projectController.deleteProjectById);
-router.put('/projects/:id/assign-users', authMiddleware, projectController.assignUsersToProject);
+router.get('/', projectController.getProjects);
+router.post('/', projectValidators, projectController.addProject);
+router.get('/:id', authMiddleware, projectController.getProjectById);
+router.put('/:id', authMiddleware, projectValidators, projectController.updateProjectById);
+router.delete('/:id', authMiddleware, projectController.deleteProjectById);
+router.put('/:id/assign-users', authMiddleware, projectController.assignUsersToProject);
 
 module.exports = router;
