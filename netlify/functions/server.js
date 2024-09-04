@@ -4,7 +4,7 @@ const serverless = require('serverless-http');
 const app = express();
 
 // Your Express app setup
-app.get('/', (req, res) => {
+app.get('/api', (req, res) => {
   res.send('Hello from Netlify!');
 });
 
