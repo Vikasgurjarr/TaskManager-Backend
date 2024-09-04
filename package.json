@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "netlify-lambda build netlify/functions-build",
-    "start": "netlify-lambda serve netlify/functions"
+    "start": "node server.js",
+    "dev": "netlify dev"
   },
   "keywords": [],
   "author": "Vikas",
@@ -22,15 +22,9 @@
     "jsonwebtoken": "^9.0.2",
     "libphonenumber-js": "^1.11.4",
     "mongoose": "^8.4.0",
-    "netlify-lambda": "^2.0.16",
     "nodemailer": "^6.9.14",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-router-dom": "^6.23.1",
-    "react-scripts": "^3.0.1",
     "serverless-http": "^3.2.0",
     "twilio": "^5.2.2",
-    "web-vitals": "^4.0.1",
     "zod": "^3.23.8"
   },
   "devDependencies": {
