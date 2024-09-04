@@ -1,3 +1,2 @@
 [build]
-publish = "build" # Or any other directory where your built site is located
-functions = "netlify/functions" # Change this to a different folder than the publish directory
+  functions = "netlify/functions"  # Directory where Netlify functions are located
