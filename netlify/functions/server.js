@@ -11,7 +11,7 @@ const router = express.Router();
 
 // CORS configuration
 const corsOptions = {
-  origin: "http://localhost:3000", // Update this based on your frontend domain
+  origin:["http://localhost:3000", "https://taskyou.netlify.app"], // Update this based on your frontend domain
   methods: "GET,POST,PUT,PATCH,DELETE,HEAD",
   credentials: true,
 };
