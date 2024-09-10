@@ -38,7 +38,7 @@ connectdb()
   });
 
 // Mount the router under the base path for Netlify
-app.use("/.netlify/functions/server", router);
+app.use("/", router);
 
 // Use the express app as a serverless function
 module.exports.handler = serverless(app);
