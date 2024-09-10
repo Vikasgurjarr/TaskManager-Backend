@@ -9,9 +9,11 @@ const routes = require("../../routes/route-index.js");
 const app = express();
 const router = express.Router();
 
+const F_URL = process.env.FRONTEND_URL; 
+
 // CORS configuration
 const corsOptions = {
-  origin: "https://taskyou.netlify.app", // Update this based on your frontend domain
+  origin: F_URL, // Update this based on your frontend domain
   methods: "GET,POST,PUT,PATCH,DELETE,HEAD",
   credentials: true,
 };
