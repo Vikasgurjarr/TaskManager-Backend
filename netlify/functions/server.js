@@ -11,6 +11,7 @@ const router = express.Router();
 
 const F_URL = process.env.FRONTEND_URL; 
 
+
 // CORS configuration
 const corsOptions = {
   origin: F_URL, // Update this based on your frontend domain
