@@ -1,8 +1,8 @@
 [build]
-  functions = "netlify/functions"
+  functions = "main/functions"
 
 [dev]
-  functions = "netlify/functions"
+  functions = "main/functions"
 
 # Redirects and rewrites
 [[redirects]]
